@@ -31,19 +31,19 @@ public class Lattice : MonoBehaviour
 
 	public void Deform()
 	{
-		Mesh mesh = _mesh.sharedMesh;
-		for (int i = 0; i < mesh.vertices.Length; i++)
-		{
-			Vector3 vertex = mesh.vertices[i];
-
-			mesh.vertices[i] = vertex - Vector3.down;
-		}
-
-		mesh.RecalculateNormals();
-		mesh.RecalculateBounds();
-		mesh.Optimize();
-
-		_mesh.sharedMesh = mesh;
+		// Mesh mesh = _mesh.sharedMesh;
+		// for (int i = 0; i < mesh.vertices.Length; i++)
+		// {
+		// 	Vector3 vertex = mesh.vertices[i];
+		//
+		// 	mesh.vertices[i] = vertex - Vector3.down;
+		// }
+		//
+		// mesh.RecalculateNormals();
+		// mesh.RecalculateBounds();
+		// mesh.Optimize();
+		//
+		// _mesh.sharedMesh = mesh;
 	}
 
 	public void ResetHandles()
