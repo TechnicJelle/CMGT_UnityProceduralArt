@@ -10,7 +10,7 @@ public class RoadSetup : MonoBehaviour
 	private void OnValidate()
 	{
 		_roadGenerator = GetComponent<RoadGenerator>();
-		_roadGenerator.onGenerate.AddListener(Generate);
+		_roadGenerator.onGenerated.AddListener(Generate);
 	}
 
 	private void Generate()
@@ -29,6 +29,6 @@ public class RoadSetup : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		_roadGenerator.onGenerate.RemoveListener(Generate);
+		_roadGenerator.onGenerated.RemoveListener(Generate);
 	}
 }
